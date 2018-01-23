@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">MyAthletic</string>
+
+    <!--Boton Menu Principal-->
     <string name="empezar">Pulsa para empezar</string>
+
+    <!--Botones Menu-->
+    <string name="plantilla">Plantilla</string>
+    <string name="himno">Himno</string>
+    <string name="b">Pulsa para empezar</string>
+    <string name="c">Pulsa para empezar</string>
+
 </resources>
