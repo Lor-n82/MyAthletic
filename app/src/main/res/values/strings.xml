@@ -7,7 +7,8 @@
     <!--Botones Menu-->
     <string name="plantilla">Plantilla</string>
     <string name="himno">Himno</string>
-    <string name="b">Pulsa para empezar</string>
-    <string name="c">Pulsa para empezar</string>
+    <string name="socios">Rincon del Socio</string>
+    <string name="acerca">Acerca de</string>
+    <string name="club">El Club</string>
 
 </resources>
