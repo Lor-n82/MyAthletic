@@ -19,6 +19,9 @@
     <string name="registrado">Introduce tus datos</string>
     <string name="noregistrado">SI aun no tienes cuenta de usuario</string>
 
+    <!--Nuevo registro-->
+    <string name="registrate">¡ registrate leon !</string>
+
     <!--Acerca de-->
     <string name="texto_ayuda">Athletic, Athletic, eup!
 Athletic gorri ta zuria

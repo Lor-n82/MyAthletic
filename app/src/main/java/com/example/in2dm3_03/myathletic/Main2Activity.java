@@ -1,6 +1,7 @@
 package com.example.in2dm3_03.myathletic;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +28,8 @@ public class Main2Activity extends AppCompatActivity {
                 Intent i1=new Intent(this,Socio.class);
                 startActivity(i1);
         }else if(boton.getId()==R.id.buttonHimno){
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.himno);//Reproducir sonido
+            mp.start();
             Intent i1=new Intent(this,Himno.class);
             startActivity(i1);
         }else if(boton.getId()==R.id.buttonAcerca) {
