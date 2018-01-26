@@ -7,39 +7,39 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class nuevo_registro extends AppCompatActivity {
-
-    EditText mUsuario,mPass;
+    DatabaseHelper helper=new DatabaseHelper(this);
+    EditText mUsuario,mPass,mPassConfirm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuevo_registro);
-
-        mUsuario=(EditText)findViewById(R.id.editTextUsuarionr);
-        mPass=(EditText)findViewById(R.id.editTextPasswordnr);
     }
 
-    public void registrar(View v){
-        AdaptadorDB admin=new AdaptadorDB(this,"usuarios",null,1);
-        SQLiteDatabase db=admin.getWritableDatabase();
-        String usuario=mUsuario.getText().toString();
-        String pass=mPass.getText().toString();
+    public void registrarse(View v){
+        if(v.getId()==R.id.buttonRegistro){
+            mUsuario=(EditText)findViewById(R.id.editTextUsuarionr);
+            mPass=(EditText)findViewById(R.id.editTextPasswordnr);
+            mPassConfirm=(EditText)findViewById(R.id.editTextConfirmarPass);
 
-        ContentValues valores=new ContentValues();
-        valores.put("codigo",1);
-        valores.put("usuario",usuario);
-        valores.put("contrasena",pass);
+            String nombre=mUsuario.getText().toString();
+            String pass=mPass.getText().toString();
+            String pass2=mPassConfirm.getText().toString();
 
-        db.insert("usuarios",null,valores);
-        db.close();
+            if(!pass.equals(pass2)){
+                Toast p = Toast.makeText(nuevo_registro.this,"Las claves no coinciden", Toast.LENGTH_SHORT);
+                p.show();
+            }else{
+                Contacto c=new Contacto();
+                c.setNombre(nombre);
+                c.setPass(pass);
+            helper.insertContact(c);
+            }
 
-        Intent i1=new Intent(this,Socio.class);
-        startActivity(i1);
-    }
 
-    public void cancelar(View v){
-        finish();
+        }
     }
 }
