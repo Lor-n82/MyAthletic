@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="texto">26dp</dimen>
+    <dimen name="padding">26dp</dimen>
+    <dimen name="mas_margen_boton">26dp</dimen>
+</resources>

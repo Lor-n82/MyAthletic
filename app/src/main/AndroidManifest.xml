@@ -27,9 +27,17 @@
         <activity
             android:name=".Himno"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".Socio" android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".Acerca" android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".Club" android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".Socio"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Acerca"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Club"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".nuevo_registro" />
+        <activity android:name=".pantalla_socio"></activity>
     </application>
 
 </manifest>

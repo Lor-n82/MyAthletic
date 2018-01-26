@@ -11,4 +11,49 @@
     <string name="acerca">Acerca de</string>
     <string name="club">El Club</string>
 
+    <!--Login Socio-->
+    <string name="login">Login</string>
+    <string name="botonregistro">registrate</string>
+    <string name="user">Usuario</string>
+    <string name="pass">Password</string>
+    <string name="registrado">Introduce tus datos</string>
+    <string name="noregistrado">SI aun no tienes cuenta de usuario</string>
+
+    <!--Acerca de-->
+    <string name="texto_ayuda">Athletic, Athletic, eup!
+Athletic gorri ta zuria
+danontzat zara zu geuria.
+Erritik sortu zinalako
+maite zaitu erriak.\n\n
+
+
+Gaztedi gorri-zuria
+zelai orlegian
+Euskalerriaren
+erakusgarria.
+Zabaldu daigun guztiok
+irrintzi alaia:
+Athletic, Athletic
+zu zara nagusia!
+Altza gaztiak!\n\n
+
+
+Athletic, Athletic
+gogoaren indarra.
+Aritz zarraren enborrak
+loratu dau orbel barria.\n\n
+
+
+Aupa mutillak!
+Aurrera gure gaztiak!
+Bilbo ta Bizkai guztia
+goratu bedi munduan.
+Aupa mutillak!
+Gora beti Euskalerria!
+Athletic gorri-zuria
+geuria.\n\n
+
+Bilbo ta Bizkaiko gaztiak gora!
+Euskaldun zintzoak aurrera! </string>
+
 </resources>

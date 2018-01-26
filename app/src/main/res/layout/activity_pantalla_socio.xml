@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/redmetal"
-    tools:context="com.example.in2dm3_03.myathletic.Club">
+    tools:context="com.example.in2dm3_03.myathletic.pantalla_socio">
 
 </android.support.constraint.ConstraintLayout>
