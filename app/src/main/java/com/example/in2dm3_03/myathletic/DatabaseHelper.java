@@ -3,10 +3,8 @@ package com.example.in2dm3_03.myathletic;
         import android.content.ContentValues;
         import android.content.Context;
         import android.database.Cursor;
-        import android.database.SQLException;
         import android.database.sqlite.SQLiteDatabase;
         import android.database.sqlite.SQLiteOpenHelper;
-        import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -19,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     static final String KEY_PASS = "pass";
     SQLiteDatabase db;
     private static final String CREAR_TABLA="create table socios (id integer primary key not null auto_increment , " +
-            "nombre text not null , uname text not null pass text not null);";
+            "nombre text not null , uname text not null, pass text not null);";
 
     public DatabaseHelper(Context context)
     {
@@ -34,7 +32,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void insertContact(Contacto c){
         db=this.getWritableDatabase();
         ContentValues valores=new ContentValues();
+
+        String query ="select * from socios";
+        Cursor cursor = db.rawQuery(query,null);
+        int count =cursor.getCount();
+
+        valores.put(KEY_ROWID,count);
         valores.put(KEY_NAME,c.getNombre());
+        valores.put(KEY_UNAME,c.getUname());
         valores.put(KEY_PASS,c.getPass());
 
         db.insert(NOMBRE_TABLA,null,valores);

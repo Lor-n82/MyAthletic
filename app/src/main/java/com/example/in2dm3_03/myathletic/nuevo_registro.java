@@ -26,6 +26,7 @@ public class nuevo_registro extends AppCompatActivity {
             mPassConfirm=(EditText)findViewById(R.id.editTextConfirmarPass);
 
             String nombre=mUsuario.getText().toString();
+            String username=
             String pass=mPass.getText().toString();
             String pass2=mPassConfirm.getText().toString();
 
