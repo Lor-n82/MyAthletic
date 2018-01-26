@@ -23,7 +23,7 @@
             android:padding="@dimen/padding"
             android:text="@string/texto_ayuda"
             android:textAlignment="center"
-            android:textColor="#FFF"
+            android:textColor="#CCC"
             android:textSize="@dimen/texto" />
     </ScrollView>
 </RelativeLayout>
