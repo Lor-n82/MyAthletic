@@ -21,6 +21,8 @@
 
     <!--Nuevo registro-->
     <string name="registrate">¡ registrate leon !</string>
+    <string name="nombre">Nombre</string>
+    <string name="repitepass">Re Password</string>
 
     <!--Acerca de-->
     <string name="texto_ayuda">Athletic, Athletic, eup!

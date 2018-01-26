@@ -10,25 +10,22 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Socio extends AppCompatActivity {
-    EditText mUsuario,mPass;
+
     DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_socio);
-
-        mUsuario=(EditText)findViewById(R.id.editTextUsuario);
-        mPass=(EditText)findViewById(R.id.editTextPassword);
     }
 
     public void onClick(View v){
         Button boton=(Button)v;
 
         if(boton.getId()==R.id.buttonLogin){
-            mUsuario=(EditText)findViewById(R.id.editTextUsuario);
+            EditText mUsuario=(EditText)findViewById(R.id.editTextUsuario);
             String name=mUsuario.getText().toString();
-            mPass=(EditText)findViewById(R.id.editTextPassword);
+            EditText mPass=(EditText)findViewById(R.id.editTextPassword);
             String pass=mPass.getText().toString();
 
             String password = helper.searchPass(name);

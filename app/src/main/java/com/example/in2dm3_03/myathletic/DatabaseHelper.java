@@ -9,14 +9,14 @@ package com.example.in2dm3_03.myathletic;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     static final int VERSION_BASEDATOS = 1;
-    static final String NOMBRE_BASEDATOS = "socios.db";
+    static final String NOMBRE_BASEDATOS = "socios";
     static final String NOMBRE_TABLA = "socios";
     static final String KEY_ROWID = "id";
     static final String KEY_NAME = "nombre";
     static final String KEY_UNAME = "uname";
     static final String KEY_PASS = "pass";
     SQLiteDatabase db;
-    private static final String CREAR_TABLA="create table socios (id integer primary key not null auto_increment , " +
+    private static final String CREAR_TABLA="create table socios (id integer primary key not null , " +
             "nombre text not null , uname text not null, pass text not null);";
 
     public DatabaseHelper(Context context)
@@ -56,7 +56,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if(cursor.moveToFirst()){
             do{
                 a=cursor.getString(0);
-                b=cursor.getString(1);
 
                 if(a.equals(uname)){
                     b=cursor.getString(1);

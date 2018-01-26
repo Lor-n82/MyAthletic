@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class nuevo_registro extends AppCompatActivity {
     DatabaseHelper helper=new DatabaseHelper(this);
-    EditText mUsuario,mPass,mPassConfirm;
+    EditText mNombre,mUsuario,mPass,mPassConfirm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +21,13 @@ public class nuevo_registro extends AppCompatActivity {
 
     public void registrarse(View v){
         if(v.getId()==R.id.buttonRegistro){
-            mUsuario=(EditText)findViewById(R.id.editTextUsuarionr);
-            mPass=(EditText)findViewById(R.id.editTextPasswordnr);
-            mPassConfirm=(EditText)findViewById(R.id.editTextConfirmarPass);
+            mNombre=(EditText)findViewById(R.id.editTextNombreR);
+            mUsuario=(EditText)findViewById(R.id.editTextUsuarioR);
+            mPass=(EditText)findViewById(R.id.editTextPassR);
+            mPassConfirm=(EditText)findViewById(R.id.editTextRePassR);
 
-            String nombre=mUsuario.getText().toString();
-            String username=
+            String nombre=mNombre.getText().toString();
+            String username=mUsuario.getText().toString();
             String pass=mPass.getText().toString();
             String pass2=mPassConfirm.getText().toString();
 
@@ -36,6 +37,7 @@ public class nuevo_registro extends AppCompatActivity {
             }else{
                 Contacto c=new Contacto();
                 c.setNombre(nombre);
+                c.setUname(username);
                 c.setPass(pass);
             helper.insertContact(c);
             }
