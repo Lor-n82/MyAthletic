@@ -37,7 +37,7 @@ public class Plantilla extends AppCompatActivity implements View.OnClickListener
             l1.addView(v);                              //Añadimos la vista con el contenido del inflater a el linear layout del Scrollview
         }
         mImagenGrande= findViewById(R.id.imageView_FotoGrande);  //Asociamos la variable con su id
-        mImagenGrande.setImageResource(mImagenes[0]);           //
+        mImagenGrande.setImageResource(mImagenes[0]);
         if(mIdImagen!=0){
             ImageView a= findViewById(mIdImagen);
             mImagenGrande.setImageDrawable(a.getDrawable());

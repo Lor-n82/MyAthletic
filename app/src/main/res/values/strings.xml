@@ -11,6 +11,14 @@
     <string name="acerca">Acerca de</string>
     <string name="club">El Club</string>
 
+    <!--El Club-->
+
+    <string name="club1">Nombre del Club: Athletic Club.\nFundación: 1898.\nSede social: Ibaigane, Alameda Mazarredo, 23 - 48009 Bilbao.\n\nNúmero de socios/as: 44.560.\nPresupuesto 2017-18: 101.940.138 euros.\nTemporadas en Primera División: Todas.</string>
+    <string name="contactarclub">Para contactar, pinche en una de estas opciones:</string>
+    <string name="contactarclubboton">Contacto Telefónico</string>
+    <string name="contactarclubboton2">Contacta via Mail</string>
+    <string name="enviar_mail">Enviado via MyAthletic</string>
+
     <!--Login Socio-->
     <string name="login">Login</string>
     <string name="botonregistro">registrate</string>

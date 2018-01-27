@@ -39,4 +39,5 @@
         <activity android:name=".pantalla_socio"></activity>
     </application>
 
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission> <!--Permisos para llamar-->
 </manifest>
