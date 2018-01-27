@@ -2,20 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/opc1"
-        android:title="Opcion XML 1" />
+        android:title="Twitter" />
     <item
         android:id="@+id/opc2"
-        android:title="Opcion XML 2" />
+        android:title="Github" />
     <item
         android:id="@+id/opc3"
-        android:title="Opcion XML 3" />
-    <item
-        android:id="@+id/opc4"
-        android:title="Opcion XML 4" />
-    <item
-        android:id="@+id/opc5"
-        android:title="Opcion XML 5" />
-    <item
-        android:id="@+id/opc6"
-        android:title="Opcion XML 6" />
+        android:title="Youtube" />
 </menu>

@@ -73,5 +73,7 @@ Euskaldun zintzoak aurrera! </string>
     <string name="acercade">Esta app ha sido desarrollada por Laurentzi Aparicio Rico,
     como parte de la asignatura "Multimedia del grado superior en Desarrollo de Aplicaciones Multiplataforma.\n
         "</string>
+    <string name="copyright">Todos los derechos son propiedad del Athletic Club</string>
+    <string name="menuAcerca">Pulsa para seguir mi trabajo</string>
 
 </resources>
