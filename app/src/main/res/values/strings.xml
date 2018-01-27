@@ -32,7 +32,7 @@
     <string name="nombre">Nombre</string>
     <string name="repitepass">Re Password</string>
 
-    <!--Acerca de-->
+    <!--Himno-->
     <string name="texto_ayuda">Athletic, Athletic, eup!
 Athletic gorri ta zuria
 danontzat zara zu geuria.
@@ -68,5 +68,10 @@ geuria.\n\n
 
 Bilbo ta Bizkaiko gaztiak gora!
 Euskaldun zintzoak aurrera! </string>
+
+    <!--Acerca de-->
+    <string name="acercade">Esta app ha sido desarrollada por Laurentzi Aparicio Rico,
+    como parte de la asignatura "Multimedia del grado superior en Desarrollo de Aplicaciones Multiplataforma.\n
+        "</string>
 
 </resources>
