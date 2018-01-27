@@ -38,9 +38,9 @@
         <activity
             android:name=".Club"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".nuevo_registro" />
-        <activity android:name=".pantalla_socio" />
-        <activity android:name=".NavegadorWeb"></activity>
+        <activity android:name=".nuevo_registro" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".pantalla_socio" android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".NavegadorWeb" android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>

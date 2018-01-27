@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 public class Acerca extends AppCompatActivity {
 
-    private String mUrl = "http://www.github.com/lor-n82/";
+    private String mUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,8 @@ public class Acerca extends AppCompatActivity {
         setContentView(R.layout.activity_acerca);
 
         WebView web = (WebView) findViewById(R.id.visor);
+
+        mUrl= "http://www.github.com/lor-n82/";
 
         web.setWebViewClient(new MyWebViewClient());
         WebSettings settings = web.getSettings();
@@ -38,55 +40,41 @@ public class Acerca extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-
-        //crearMenu(menu);
-        return true;
-    }
-
-    @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
 
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
+
+        getMenuInflater().inflate(R.menu.menu, menu);
 
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        super.onOptionsItemSelected(item);
-        seleccionarOpcion(item);
-        return true;
-    }
+    public boolean onContextItemSelected(MenuItem item) {
 
-    private void seleccionarOpcion(MenuItem item) {
-        int itemId = item.getItemId();
-        Log.d("mira", "Entra");
-        switch (itemId) {
+        switch (item.getItemId()) {
             case R.id.opc1:
+                mUrl="https://twitter.com/loren_aparicio";
                 Toast.makeText(this, "Accediento a Twitter", Toast.LENGTH_LONG).show();
-                Intent i1=new Intent(this,NavegadorWeb.class);
-                i1.putExtra("twitter","http://www.google.es");
+                Intent i1 = new Intent(this, NavegadorWeb.class);
+                i1.putExtra("url", mUrl);
                 startActivity(i1);
                 break;
             case R.id.opc2:
+                mUrl="http://www.github.com/lor-n82/";
                 Toast.makeText(this, "Accediendo a Github", Toast.LENGTH_LONG).show();
-                Intent i2=new Intent(this,NavegadorWeb.class);
-                i2.putExtra("github","http://www.google.es");
+                Intent i2 = new Intent(this, NavegadorWeb.class);
+                i2.putExtra("url", mUrl);
                 startActivity(i2);
                 break;
             case R.id.opc3:
-                Toast.makeText(this, "Accediendo a Github", Toast.LENGTH_LONG).show();
-                Intent i3=new Intent(this,NavegadorWeb.class);
-                i3.putExtra("youtube","http://www.youtube.es");
+                mUrl="https://www.youtube.com/user/TheDjkiller88";
+                Toast.makeText(this, "Accediendo a Youtube", Toast.LENGTH_LONG).show();
+                Intent i3 = new Intent(this, NavegadorWeb.class);
+                i3.putExtra("url", mUrl);
                 startActivity(i3);
                 break;
         }
+        return super.onContextItemSelected(item);
     }
 
     private class MyWebViewClient extends WebViewClient {
