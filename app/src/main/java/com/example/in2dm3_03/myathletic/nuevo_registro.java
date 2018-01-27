@@ -71,23 +71,17 @@ public class nuevo_registro extends AppCompatActivity {
         Intent intent = new Intent(this, Notificacion.class);
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
-        builder.setContentTitle("Notification Title");
+        builder.setContentTitle("Registro completado");
         builder.setContentText("Felicidades "+nombre+" estas registrado en MyAthletic !!!");
         builder.setContentIntent(contentIntent);
         builder.setAutoCancel(true);
 
         builder.setDefaults(NotificationCompat.DEFAULT_VIBRATE);
         builder.setDefaults(NotificationCompat.DEFAULT_SOUND);
-
         Notification notif = builder.build();
 
         final int HELLO_ID = 1;
         mNotificationManager.notify(HELLO_ID, notif);
         finish();
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
     }
 }
