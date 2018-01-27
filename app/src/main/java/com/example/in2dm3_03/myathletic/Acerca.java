@@ -67,8 +67,8 @@ public class Acerca extends AppCompatActivity {
                 startActivity(i2);
                 break;
             case R.id.opc3:
-                mUrl="https://www.youtube.com/user/TheDjkiller88";
-                Toast.makeText(this, "Accediendo a Youtube", Toast.LENGTH_LONG).show();
+                mUrl="https://www.linkedin.com/in/laurentzi-aparicio-rico-3011a272";
+                Toast.makeText(this, "Accediendo a Linkdin", Toast.LENGTH_LONG).show();
                 Intent i3 = new Intent(this, NavegadorWeb.class);
                 i3.putExtra("url", mUrl);
                 startActivity(i3);

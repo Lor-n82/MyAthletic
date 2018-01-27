@@ -3,7 +3,9 @@
     package="com.example.in2dm3_03.myathletic">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE" /> <!-- Permisos para llamar -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- Permisos para llamar -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -38,9 +40,17 @@
         <activity
             android:name=".Club"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".nuevo_registro" android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".pantalla_socio" android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".NavegadorWeb" android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".nuevo_registro"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".pantalla_socio"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".NavegadorWeb"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".Notificacion"></activity>
     </application>
 
 </manifest>
