@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -25,8 +26,7 @@ public class nuevo_registro extends AppCompatActivity {
 
     public void registrarse(View v) {
 
-        if (v.getId() == R.id.buttonRegistro) {
-            notificacion();
+        if (v.getId() == R.id.buttonRegistrateLeon) {
             mNombre = (EditText) findViewById(R.id.editTextNombreR);
             mUsuario = (EditText) findViewById(R.id.editTextUsuarioR);
             mPass = (EditText) findViewById(R.id.editTextPassR);
@@ -46,13 +46,15 @@ public class nuevo_registro extends AppCompatActivity {
                 c.setUname(username);
                 c.setPass(pass);
                 helper.insertContact(c);
+
+                notificacion(c.getNombre());
             }
 
 
         }
     }
 
-    public void notificacion() {
+    public void notificacion(String nombre) {
         //Paso 1:conseguir Notificaciones
         NotificationManager mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
@@ -70,7 +72,7 @@ public class nuevo_registro extends AppCompatActivity {
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
         builder.setContentTitle("Notification Title");
-        builder.setContentText("Notification text");
+        builder.setContentText("Felicidades "+nombre+" estas registrado en MyAthletic !!!");
         builder.setContentIntent(contentIntent);
         builder.setAutoCancel(true);
 
