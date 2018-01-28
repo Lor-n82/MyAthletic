@@ -29,7 +29,7 @@ public class pantalla_socio extends AppCompatActivity {
         Intent i1 = new Intent(this, NavegadorSocios.class);
         if (imagen.getId() == R.id.imageButtonClasificacion) {
             i1.putExtra("ser", "http://www.athletic-club.eus/cas/clasificacion/2017-18/athletic-liga.html");
-            Toast.makeText(this, "Accediendo a Clasificación", Toast.LENGTH_SHORT).show(); //Crear String
+            Toast.makeText(this, "Accediendo a Clasificación", Toast.LENGTH_SHORT).show();
             startActivity(i1);
         } else if (imagen.getId() == R.id.imageButtonPartidos) {
             i1.putExtra("ser", "http://www.athletic-club.eus/cas/calendario/2017-18/athletic-liga.html");
