@@ -11,6 +11,4 @@ public class Himno extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_himno);
     }
-
-
 }

@@ -11,7 +11,7 @@ public class Notificacion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notificacion);
 
-        Toast.makeText(this,"Notoficacion recibida",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Notoficacion recibida", Toast.LENGTH_SHORT).show();
         finish();
     }
 }

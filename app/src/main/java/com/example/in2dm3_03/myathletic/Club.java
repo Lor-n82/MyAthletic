@@ -16,16 +16,17 @@ public class Club extends AppCompatActivity {
     }
 
     @SuppressLint("MissingPermission")
-    public void contactarTlf(View v){
+    public void contactarTlf(View v) {
         Intent i1 = new Intent(Intent.ACTION_CALL);
         i1.setData(Uri.parse("tel:722466004"));
 
         startActivity(i1);
     }
+
     @SuppressLint("MissingPermission")
-    public void contactarMail(View v){
-        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto","athletic@athletic-club.net", null));
+    public void contactarMail(View v) {
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "athletic@athletic-club.net", null));
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "A la atención del Athletic Club");
-        startActivity(Intent.createChooser(emailIntent,  this.getString(R.string.enviar_mail)));
+        startActivity(Intent.createChooser(emailIntent, this.getString(R.string.enviar_mail)));
     }
 }

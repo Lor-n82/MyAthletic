@@ -19,20 +19,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String fuenteMisstral="fuentes/misstral.ttf";   //Pasamos la ruta de la fuente
-        this.mMisstral=Typeface.createFromAsset(getAssets(),fuenteMisstral);    //Recogemos el recurso
+        String fuenteMisstral = "fuentes/misstral.ttf";   //Pasamos la ruta de la fuente
+        this.mMisstral = Typeface.createFromAsset(getAssets(), fuenteMisstral);    //Recogemos el recurso
 
-        mTextoNombre=(TextView)findViewById(R.id.textViewNombreApp);
+        mTextoNombre = (TextView) findViewById(R.id.textViewNombreApp);
         mTextoNombre.setTypeface(mMisstral);  //Le aplicamos el tipo de letra
     }
 
-    public void onClick(View v){
-        Button boton=(Button)v;
+    public void onClick(View v) {
+        Button boton = (Button) v;
 
-        if(boton.getId()==R.id.buttonEmpezar){
+        if (boton.getId() == R.id.buttonEmpezar) {
             MediaPlayer mp = MediaPlayer.create(this, R.raw.eup);//Reproducir sonido
             mp.start();
-            Intent i1=new Intent(this,Main2Activity.class);
+            Intent i1 = new Intent(this, Main2Activity.class);
             startActivity(i1);
         }
     }

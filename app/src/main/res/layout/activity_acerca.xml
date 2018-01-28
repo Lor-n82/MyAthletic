@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/redmetal"
-    tools:context="com.example.in2dm3_03.myathletic.Club">
+    tools:context="com.example.in2dm3_03.myathletic.Acerca">
 
     <TextView
         android:id="@+id/textViewAcerca"
@@ -20,19 +20,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.089999974" />
-
-    <WebView
-        android:id="@+id/visor"
-        android:layout_width="320dp"
-        android:layout_height="180dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintVertical_bias="0.16" />
 
     <TextView
         android:id="@+id/textViewDerechos"
@@ -46,12 +34,12 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.36" />
 
     <TextView
         android:id="@+id/textViewAcercaMenu"
         android:layout_width="220dp"
-        android:layout_height="25dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/metal"
@@ -64,6 +52,36 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.48" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/metal"
+        android:onClick="compartir"
+        android:text="@string/compartir"
+        android:textColor="#222"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:srcCompat="@drawable/social" />
 
 </android.support.constraint.ConstraintLayout>

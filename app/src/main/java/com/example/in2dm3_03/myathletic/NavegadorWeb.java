@@ -13,12 +13,13 @@ public class NavegadorWeb extends AppCompatActivity {
 
     private String mUrl;
     private WebView web;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navegador_web);
 
-        mUrl=getIntent().getStringExtra("url");
+        mUrl = getIntent().getStringExtra("url");
         web = (WebView) findViewById(R.id.navegador);
 
         web.setWebViewClient(new MyWebViewClient());
@@ -26,6 +27,7 @@ public class NavegadorWeb extends AppCompatActivity {
         web.loadUrl(mUrl);
 
     }
+
     private class MyWebViewClient extends WebViewClient {
 
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -43,7 +45,7 @@ public class NavegadorWeb extends AppCompatActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        outState.putString("url",mUrl);
+        outState.putString("url", mUrl);
         web.saveState(outState);
         super.onSaveInstanceState(outState);
     }

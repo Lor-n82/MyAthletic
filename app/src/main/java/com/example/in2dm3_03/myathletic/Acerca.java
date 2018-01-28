@@ -26,17 +26,16 @@ public class Acerca extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acerca);
 
-        WebView web = (WebView) findViewById(R.id.visor);
-
-        mUrl= "http://www.github.com/lor-n82/";
-
-        web.setWebViewClient(new MyWebViewClient());
-        WebSettings settings = web.getSettings();
-        web.loadUrl(mUrl);
-
         TextView text = (TextView) findViewById(R.id.textViewAcercaMenu);
 
         registerForContextMenu(text); //este texto va a tener menu de contexto
+    }
+
+    public void compartir(View v) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, "Prueba enviada desde MyAthletic");
+        startActivity(Intent.createChooser(intent, "Compartir con"));
     }
 
     @Override
@@ -45,7 +44,6 @@ public class Acerca extends AppCompatActivity {
 
 
         getMenuInflater().inflate(R.menu.menu, menu);
-
     }
 
     @Override
@@ -53,21 +51,21 @@ public class Acerca extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.opc1:
-                mUrl="https://twitter.com/loren_aparicio";
+                mUrl = "https://twitter.com/loren_aparicio";
                 Toast.makeText(this, "Accediento a Twitter", Toast.LENGTH_LONG).show();
                 Intent i1 = new Intent(this, NavegadorWeb.class);
                 i1.putExtra("url", mUrl);
                 startActivity(i1);
                 break;
             case R.id.opc2:
-                mUrl="http://www.github.com/lor-n82/";
+                mUrl = "http://www.github.com/lor-n82/";
                 Toast.makeText(this, "Accediendo a Github", Toast.LENGTH_LONG).show();
                 Intent i2 = new Intent(this, NavegadorWeb.class);
                 i2.putExtra("url", mUrl);
                 startActivity(i2);
                 break;
             case R.id.opc3:
-                mUrl="https://www.linkedin.com/in/laurentzi-aparicio-rico-3011a272";
+                mUrl = "https://www.linkedin.com/in/laurentzi-aparicio-rico-3011a272";
                 Toast.makeText(this, "Accediendo a Linkdin", Toast.LENGTH_LONG).show();
                 Intent i3 = new Intent(this, NavegadorWeb.class);
                 i3.putExtra("url", mUrl);
@@ -76,14 +74,4 @@ public class Acerca extends AppCompatActivity {
         }
         return super.onContextItemSelected(item);
     }
-
-    private class MyWebViewClient extends WebViewClient {
-
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
-    }
-
-
 }

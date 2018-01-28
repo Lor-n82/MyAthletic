@@ -19,29 +19,28 @@ public class Socio extends AppCompatActivity {
         setContentView(R.layout.activity_socio);
     }
 
-    public void onClick(View v){
-        Button boton=(Button)v;
+    public void onClick(View v) {
+        Button boton = (Button) v;
 
-        if(boton.getId()==R.id.buttonLogin){
-            EditText mUsuario=(EditText)findViewById(R.id.editTextUsuario);
-            String name=mUsuario.getText().toString();
-            EditText mPass=(EditText)findViewById(R.id.editTextPassword);
-            String pass=mPass.getText().toString();
+        if (boton.getId() == R.id.buttonLogin) {
+            EditText mUsuario = (EditText) findViewById(R.id.editTextUsuario);
+            String name = mUsuario.getText().toString();
+            EditText mPass = (EditText) findViewById(R.id.editTextPassword);
+            String pass = mPass.getText().toString();
 
             String password = helper.searchPass(name);
-            if(pass.equals(password)){
-                Intent i1=new Intent(this,pantalla_socio.class);
-                i1.putExtra("Username",name);
+            if (pass.equals(password)) {
+                Intent i1 = new Intent(this, pantalla_socio.class);
+                i1.putExtra("Username", name);
                 startActivity(i1);
-            }else{
-                Toast temp = Toast.makeText(Socio.this,"¡¡¡ El Usuario y la Contraseña, no coinciden !!!", Toast.LENGTH_SHORT);
+            } else {
+                Toast temp = Toast.makeText(Socio.this, "¡¡¡ El Usuario y la Contraseña, no coinciden !!!", Toast.LENGTH_SHORT);
                 temp.show();
             }
 
 
-
-        }else if(boton.getId()==R.id.buttonRegistro){
-            Intent i1=new Intent(this,nuevo_registro.class);
+        } else if (boton.getId() == R.id.buttonRegistro) {
+            Intent i1 = new Intent(this, nuevo_registro.class);
             startActivity(i1);
         }
     }

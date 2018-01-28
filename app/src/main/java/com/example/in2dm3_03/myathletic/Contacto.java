@@ -7,7 +7,7 @@ package com.example.in2dm3_03.myathletic;
 public class Contacto {
 
     int id;
-    String nombre,uname,pass;
+    String nombre, uname, pass;
 
     public int getId() {
         return id;
