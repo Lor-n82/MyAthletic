@@ -27,6 +27,16 @@
     <string name="registrado">Introduce tus datos</string>
     <string name="noregistrado">SI aun no tienes cuenta de usuario</string>
 
+    <!--Pantalla Socio-->
+    <string name="bienvenidosocio">Bienvenido a tu seccion de socio</string>
+    <string name="exclusivosocio">Desde esta pantalla podras acceder a
+        contenido exclusivo del Athletic Club
+        como por ejemplo hacer compras online,
+        consultar la clasificacion o acceder sirectamente
+        a la web del Athletic Club\n\n
+
+    Pincha sobre los iconos y amplia tu experiencia.</string>
+
     <!--Nuevo registro-->
     <string name="registrate">¡ registrate leon !</string>
     <string name="nombre">Nombre</string>

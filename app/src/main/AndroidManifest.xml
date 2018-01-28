@@ -50,7 +50,8 @@
             android:name=".NavegadorWeb"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".Notificacion"></activity>
+        <activity android:name=".Notificacion" />
+        <activity android:name=".NavegadorSocios" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
