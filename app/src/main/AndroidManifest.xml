@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.in2dm3_03.myathletic">
 
+    <!-- Permisos para llamar e internet -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
-    <!-- Permisos para llamar -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
