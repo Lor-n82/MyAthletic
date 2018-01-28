@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class pantalla_socio extends AppCompatActivity {
     static final String NAVEGADOR = "servicio";
@@ -27,13 +28,16 @@ public class pantalla_socio extends AppCompatActivity {
         ImageView imagen = (ImageView) v;
         Intent i1 = new Intent(this, NavegadorSocios.class);
         if (imagen.getId() == R.id.imageButtonClasificacion) {
-            i1.putExtra(NAVEGADOR, "http://www.athletic-club.eus/cas/clasificacion/2017-18/athletic-liga.html");
+            i1.putExtra("ser", "http://www.athletic-club.eus/cas/clasificacion/2017-18/athletic-liga.html");
+            Toast.makeText(this, "Accediendo a Clasificación", Toast.LENGTH_SHORT).show();
             startActivity(i1);
         } else if (imagen.getId() == R.id.imageButtonPartidos) {
-            i1.putExtra(NAVEGADOR, "http://www.athletic-club.eus/cas/calendario/2017-18/athletic-liga.html");
+            i1.putExtra("ser", "http://www.athletic-club.eus/cas/calendario/2017-18/athletic-liga.html");
+            Toast.makeText(this, "Accediendo a Calendario", Toast.LENGTH_SHORT).show();
             startActivity(i1);
         } else if (imagen.getId() == R.id.imageButtonTienda) {
-            i1.putExtra(NAVEGADOR, "https://www.athletic-club.eus/cas/tienda/new-balance_1-equipacion/36-356.html");
+            i1.putExtra("ser", "https://www.athletic-club.eus/cas/tienda/new-balance_1-equipacion/36-356.html");
+            Toast.makeText(this, "Accediendo a la Tienda", Toast.LENGTH_SHORT).show();
             startActivity(i1);
         }
     }
