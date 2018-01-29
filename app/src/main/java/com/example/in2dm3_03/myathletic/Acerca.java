@@ -52,7 +52,7 @@ public class Acerca extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.opc1:
                 mUrl = "https://twitter.com/loren_aparicio";
-                Toast.makeText(this, "Accediento a Twitter", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Accediendo a Twitter", Toast.LENGTH_LONG).show();
                 Intent i1 = new Intent(this, NavegadorWeb.class);
                 i1.putExtra("url", mUrl);
                 startActivity(i1);
