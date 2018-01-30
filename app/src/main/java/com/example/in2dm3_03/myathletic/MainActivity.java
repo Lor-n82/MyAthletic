@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String fuenteMisstral = "fuentes/misstral.ttf";   //Pasamos la ruta de la fuente
+        String fuenteMisstral = "fuentes/misstral.ttf";                            //Pasamos la ruta de la fuente
         this.mMisstral = Typeface.createFromAsset(getAssets(), fuenteMisstral);    //Recogemos el recurso
 
         mTextoNombre = (TextView) findViewById(R.id.textViewNombreApp);
-        mTextoNombre.setTypeface(mMisstral);  //Le aplicamos el tipo de letra
+        mTextoNombre.setTypeface(mMisstral);                                       //Le aplicamos el tipo de letra
     }
 
     public void onClick(View v) {

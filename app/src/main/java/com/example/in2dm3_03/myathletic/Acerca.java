@@ -32,6 +32,8 @@ public class Acerca extends AppCompatActivity {
     }
 
     public void compartir(View v) {
+
+        //Envio de texto eligiendo app
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, "Prueba enviada desde MyAthletic");
@@ -51,6 +53,8 @@ public class Acerca extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.opc1:
+
+                //Envio direccion URL a otra actividad
                 mUrl = "https://twitter.com/loren_aparicio";
                 Toast.makeText(this, "Accediendo a Twitter", Toast.LENGTH_LONG).show();
                 Intent i1 = new Intent(this, NavegadorWeb.class);

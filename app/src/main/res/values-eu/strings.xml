@@ -87,4 +87,9 @@ Euskaldun zintzoak aurrera! </string>
     <string name="copyright">Athletic Clubeko eskubide guztiak dira</string>
     <string name="menuAcerca">Egin klik nire lana jarraitzeko</string>
     <string name="compartir">Partekatu aplikazioa</string>
+
+    <!--Mas-->
+    <string name="camponombre">Izena</string>
+    <string name="campousuario">Usuario</string>
+    <string name="campopass">Password</string>
 </resources>

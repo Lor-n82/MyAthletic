@@ -87,4 +87,9 @@ Euskaldun zintzoak aurrera! </string>
     <string name="copyright">Todos los derechos son propiedad del Athletic Club</string>
     <string name="menuAcerca">Pulsa para seguir mi trabajo</string>
     <string name="compartir">Comparte la app</string>
+
+    <!--Mas-->
+    <string name="camponombre">Nombre</string>
+    <string name="campousuario">Usuario</string>
+    <string name="campopass">Password</string>
 </resources>

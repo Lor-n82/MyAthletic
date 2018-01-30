@@ -16,6 +16,8 @@ public class NavegadorSocios extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navegador_socios);
 
+
+        //Recojo la direccion web que pasare al navegador
         mUrl = getIntent().getStringExtra("ser");
         web = (WebView) findViewById(R.id.navegadorSocios);
 

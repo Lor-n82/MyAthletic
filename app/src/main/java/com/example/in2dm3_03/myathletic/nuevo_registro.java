@@ -46,8 +46,6 @@ public class nuevo_registro extends AppCompatActivity {
                 helper.insertContact(c);
                 notificacion(c.getNombre());
             }
-
-
         }
     }
 

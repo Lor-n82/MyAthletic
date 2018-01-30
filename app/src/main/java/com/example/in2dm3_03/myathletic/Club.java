@@ -15,9 +15,9 @@ public class Club extends AppCompatActivity {
         setContentView(R.layout.activity_club);
     }
 
-    @SuppressLint("MissingPermission")
+    @SuppressLint("MissingPermission")              //Si no lo aplico no ejecuta la llamada
     public void contactarTlf(View v) {
-        Intent i1 = new Intent(Intent.ACTION_CALL);
+        Intent i1 = new Intent(Intent.ACTION_CALL); //Relizar llamada
         i1.setData(Uri.parse("tel:722466004"));
 
         startActivity(i1);
@@ -25,7 +25,7 @@ public class Club extends AppCompatActivity {
 
     @SuppressLint("MissingPermission")
     public void contactarMail(View v) {
-        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "athletic@athletic-club.net", null));
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "athletic@athletic-club.net", null));     //Enviar Mail
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "A la atención del Athletic Club");
         startActivity(Intent.createChooser(emailIntent, this.getString(R.string.enviar_mail)));
     }
