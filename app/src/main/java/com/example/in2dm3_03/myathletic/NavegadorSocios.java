@@ -2,11 +2,9 @@ package com.example.in2dm3_03.myathletic;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
 
 public class NavegadorSocios extends AppCompatActivity {
     private String mUrl;

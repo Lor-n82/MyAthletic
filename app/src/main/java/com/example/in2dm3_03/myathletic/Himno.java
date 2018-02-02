@@ -2,8 +2,6 @@ package com.example.in2dm3_03.myathletic;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 public class Himno extends AppCompatActivity {
 
