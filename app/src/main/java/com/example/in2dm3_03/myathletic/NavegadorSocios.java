@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class NavegadorSocios extends AppCompatActivity {
     private String mUrl;
     private WebView web;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

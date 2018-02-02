@@ -44,7 +44,6 @@ public class Acerca extends AppCompatActivity {
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
 
-
         getMenuInflater().inflate(R.menu.menu, menu);
     }
 
@@ -53,7 +52,6 @@ public class Acerca extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.opc1:
-
                 //Envio direccion URL a otra actividad
                 mUrl = "https://twitter.com/loren_aparicio";
                 Toast.makeText(this, "Accediendo a Twitter", Toast.LENGTH_LONG).show();

@@ -44,12 +44,12 @@ public class nuevo_registro extends AppCompatActivity {
                 c.setUname(username);
                 c.setPass(pass);
                 helper.insertContact(c);
-                notificacion(c.getNombre());
+                notificacion(c.getNombre(),c.getUname());
             }
         }
     }
 
-    public void notificacion(String nombre) {
+    public void notificacion(String nombre, String usuario) {
         //Paso 1:conseguir Notificaciones
         NotificationManager mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
@@ -67,7 +67,7 @@ public class nuevo_registro extends AppCompatActivity {
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
         builder.setContentTitle("Registro completado");
-        builder.setContentText("Felicidades " + nombre + " estas registrado en MyAthletic !!!");
+        builder.setContentText(nombre+" te has registrado como "+usuario+" !!!");
         builder.setContentIntent(contentIntent);
         builder.setAutoCancel(true);
 

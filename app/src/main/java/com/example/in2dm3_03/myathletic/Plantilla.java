@@ -13,8 +13,8 @@ public class Plantilla extends AppCompatActivity implements View.OnClickListener
     private LayoutInflater mInflater; //Inflador para layout
     private ImageView mScrollImage; //ImageView de itemdegaleria (XML que recogemos)
     private ImageView mImagenGrande; //ImageView  con la foto en Grande
-    private int mIdImagen=0;
-    private String [] mEtiquetas={"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29"};
+    private int mIdImagen = 0;
+    private String[] mEtiquetas = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"};
     private String mGuardarTag;
 
     private int[] mImagenes = {R.drawable.kepa, R.drawable.remiro, R.drawable.unai, R.drawable.herrerin, R.drawable.lekue, R.drawable.sanjose, R.drawable.demarcos,
@@ -49,15 +49,15 @@ public class Plantilla extends AppCompatActivity implements View.OnClickListener
             ImageView a = findViewById(mIdImagen);
             mImagenGrande.setImageDrawable(a.getDrawable());
         }
-        if(savedInstanceState !=null){
-            mGuardarTag=savedInstanceState.getString("mGuardarTag");
+        if (savedInstanceState != null) {
+            mGuardarTag = savedInstanceState.getString("mGuardarTag");
 
-            for (int j=0;j<mEtiquetas.length;j++){
-                if(mGuardarTag==mEtiquetas[j]){
+            for (int j = 0; j < mEtiquetas.length; j++) {
+                if (mGuardarTag == mEtiquetas[j]) {
                     mImagenGrande.setImageResource(mImagenes[j]);
                 }
             }
-        }else{
+        } else {
             mImagenGrande.setImageResource(mImagenes[0]);
         }
     }
@@ -65,18 +65,18 @@ public class Plantilla extends AppCompatActivity implements View.OnClickListener
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString("mGuardarTag",mGuardarTag);
+        outState.putString("mGuardarTag", mGuardarTag);
     }
 
     @Override
     public void onClick(View view) {
-        ImageView i=(ImageView) view;
+        ImageView i = (ImageView) view;
 
 
-        for (int j=0;j<mEtiquetas.length;j++){
-            if(view.getTag()==mEtiquetas[j]){
+        for (int j = 0; j < mEtiquetas.length; j++) {
+            if (view.getTag() == mEtiquetas[j]) {
                 mImagenGrande.setImageResource(mImagenes[j]);
-                mGuardarTag= (String) view.getTag();
+                mGuardarTag = (String) view.getTag();
             }
         }
     }

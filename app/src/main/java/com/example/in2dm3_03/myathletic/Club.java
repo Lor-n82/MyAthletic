@@ -17,7 +17,7 @@ public class Club extends AppCompatActivity {
 
     @SuppressLint("MissingPermission")              //Si no lo aplico no ejecuta la llamada
     public void contactarTlf(View v) {
-        Intent i1 = new Intent(Intent.ACTION_CALL); //Relizar llamada
+        Intent i1 = new Intent(Intent.ACTION_CALL); //Realizar llamada
         i1.setData(Uri.parse("tel:722466004"));
 
         startActivity(i1);
