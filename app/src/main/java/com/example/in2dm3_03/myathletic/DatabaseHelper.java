@@ -28,6 +28,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         this.db = db;
     }
 
+    /**
+     * Inserta un contacto nuevo
+     * @param c
+     */
     public void insertContact(Contacto c) {
         db = this.getWritableDatabase();
         ContentValues valores = new ContentValues();
@@ -45,6 +49,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     *Metodo para encontrar el password de cierto usuario
+     * @param uname
+     * @return
+     */
     public String searchPass(String uname) {
 
         db = this.getReadableDatabase();
@@ -70,5 +79,4 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(query);
         this.onCreate(db);
     }
-
 }

@@ -1,9 +1,5 @@
 package com.example.in2dm3_03.myathletic;
 
-/**
- * Created by loren on 26/01/2018.
- */
-
 public class Contacto {
 
     int id;
