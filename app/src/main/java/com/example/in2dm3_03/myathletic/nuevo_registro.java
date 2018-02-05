@@ -43,7 +43,7 @@ public class nuevo_registro extends AppCompatActivity {
                 c.setUname(username);
                 c.setPass(pass);
                 helper.insertContact(c);
-                notificacion(c.getNombre(),c.getUname());
+                notificacion(c.getNombre(), c.getUname());
             }
         }
     }
@@ -66,7 +66,7 @@ public class nuevo_registro extends AppCompatActivity {
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
         builder.setContentTitle("Registro completado");
-        builder.setContentText(nombre+" te has registrado como "+usuario+" !!!");
+        builder.setContentText(nombre + " te has registrado como " + usuario + " !!!");
         builder.setContentIntent(contentIntent);
         builder.setAutoCancel(true);
 

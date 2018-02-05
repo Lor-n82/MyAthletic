@@ -15,7 +15,6 @@ public class NavegadorSocios extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navegador_socios);
 
-
         //Recojo la direccion web que pasare al navegador
         mUrl = getIntent().getStringExtra("ser");
         web = (WebView) findViewById(R.id.navegadorSocios);
@@ -31,5 +30,19 @@ public class NavegadorSocios extends AppCompatActivity {
             view.loadUrl(url);
             return true;
         }
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.get("url");
+        web.restoreState(savedInstanceState);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString("url", mUrl);
+        web.saveState(outState);
+        super.onSaveInstanceState(outState);
     }
 }

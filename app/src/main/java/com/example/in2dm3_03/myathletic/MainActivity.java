@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
         Button boton = (Button) v;
 
         if (boton.getId() == R.id.buttonEmpezar) {
-            MediaPlayer mp = MediaPlayer.create(this, R.raw.eup);//Reproducir sonido
-            mp.start();
             Intent i1 = new Intent(this, Main2Activity.class);
             startActivity(i1);
         }

@@ -30,6 +30,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * Inserta un contacto nuevo
+     *
      * @param c
      */
     public void insertContact(Contacto c) {
@@ -50,7 +51,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     /**
-     *Metodo para encontrar el password de cierto usuario
+     * Metodo para encontrar el password de cierto usuario
+     *
      * @param uname
      * @return
      */

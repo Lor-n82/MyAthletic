@@ -12,7 +12,6 @@
     <string name="club">El Club</string>
 
     <!--El Club-->
-
     <string name="club1">Nombre del Club: Athletic Club.\nFundación: 1898.\nSede social: Ibaigane, Alameda Mazarredo, 23 - 48009 Bilbao.\n\nNúmero de socios/as: 44.560.\nPresupuesto 2017-18: 101.940.138 euros.\nTemporadas en Primera División: Todas.</string>
     <string name="contactarclub">Para contactar, pinche en una de estas opciones:</string>
     <string name="contactarclubboton">Contacto Telefónico</string>
@@ -35,7 +34,8 @@
         consultar la clasificacion o acceder sirectamente
         a la web del Athletic Club\n\n
 
-    Pincha sobre los iconos y amplia tu experiencia.</string>
+    Pincha sobre los iconos y amplia tu experiencia.
+    </string>
 
     <!--Nuevo registro-->
     <string name="registrate">¡ registrate leon !</string>
@@ -44,40 +44,41 @@
 
     <!--Himno-->
     <string name="texto_ayuda">Athletic, Athletic, eup!
-Athletic gorri ta zuria
-danontzat zara zu geuria.
-Erritik sortu zinalako
-maite zaitu erriak.\n\n
+        Athletic gorri ta zuria
+        danontzat zara zu geuria.
+        Erritik sortu zinalako
+        maite zaitu erriak.\n\n
 
 
-Gaztedi gorri-zuria
-zelai orlegian
-Euskalerriaren
-erakusgarria.
-Zabaldu daigun guztiok
-irrintzi alaia:
-Athletic, Athletic
-zu zara nagusia!
-Altza gaztiak!\n\n
+        Gaztedi gorri-zuria
+        zelai orlegian
+        Euskalerriaren
+        erakusgarria.
+        Zabaldu daigun guztiok
+        irrintzi alaia:
+        Athletic, Athletic
+        zu zara nagusia!
+        Altza gaztiak!\n\n
 
 
-Athletic, Athletic
-gogoaren indarra.
-Aritz zarraren enborrak
-loratu dau orbel barria.\n\n
+        Athletic, Athletic
+        gogoaren indarra.
+        Aritz zarraren enborrak
+        loratu dau orbel barria.\n\n
 
 
-Aupa mutillak!
-Aurrera gure gaztiak!
-Bilbo ta Bizkai guztia
-goratu bedi munduan.
-Aupa mutillak!
-Gora beti Euskalerria!
-Athletic gorri-zuria
-geuria.\n\n
+        Aupa mutillak!
+        Aurrera gure gaztiak!
+        Bilbo ta Bizkai guztia
+        goratu bedi munduan.
+        Aupa mutillak!
+        Gora beti Euskalerria!
+        Athletic gorri-zuria
+        geuria.\n\n
 
-Bilbo ta Bizkaiko gaztiak gora!
-Euskaldun zintzoak aurrera! </string>
+        Bilbo ta Bizkaiko gaztiak gora!
+        Euskaldun zintzoak aurrera!
+    </string>
 
     <!--Acerca de-->
     <string name="acercade">Esta app ha sido desarrollada por Laurentzi Aparicio Rico,
@@ -91,4 +92,5 @@ Euskaldun zintzoak aurrera! </string>
     <string name="camponombre">Nombre</string>
     <string name="campousuario">Usuario</string>
     <string name="campopass">Password</string>
+
 </resources>

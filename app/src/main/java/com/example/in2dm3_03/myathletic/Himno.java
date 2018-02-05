@@ -11,7 +11,7 @@ public class Himno extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_himno);
-        mp= MediaPlayer.create(this, R.raw.himno);//Reproducir sonido
+        mp = MediaPlayer.create(this, R.raw.himno);//Reproducir sonido
         mp.start();
     }
 
