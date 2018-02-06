@@ -11,7 +11,6 @@ public class Main2Activity extends AppCompatActivity {
     int btn;
     MediaPlayer mp;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +25,6 @@ public class Main2Activity extends AppCompatActivity {
         if (boton.getId() == R.id.buttonClub) {
             Intent i1 = new Intent(this, Club.class);
             startActivity(i1);
-
         } else if (boton.getId() == R.id.buttonPlantilla) {
             Intent i1 = new Intent(this, Plantilla.class);
             startActivity(i1);
