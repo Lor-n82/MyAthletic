@@ -4,10 +4,11 @@ import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 
 public class Himno extends AppCompatActivity {
-    static MediaPlayer mp=null;
-    int cont;
+
+    static MediaPlayer mp = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,15 +16,11 @@ public class Himno extends AppCompatActivity {
         setContentView(R.layout.activity_himno);
         mp = MediaPlayer.create(this, R.raw.himno);//Reproducir sonido
 
-        if(savedInstanceState != null && savedInstanceState.containsKey("tiempo")) {
+        //Recupero el sonido donde lo deje al rotar
+        if (savedInstanceState != null && savedInstanceState.containsKey("tiempo")) {
             mp.seekTo(savedInstanceState.getInt("tiempo", 0));
-            cont++;
-        }
-
-    if (mp!=null && cont==0){
-        mp.start();
-    }
-
+        } else
+            mp.start();
     }
 
     protected void onSaveInstanceState(Bundle out) {
@@ -31,15 +28,15 @@ public class Himno extends AppCompatActivity {
         out.putInt("tiempo", mp.getCurrentPosition());
     }
 
-    @Override
-    protected void onPause() {
-        mp.stop();
-        super.onPause();
-    }
-
+    /**
+     * Entra pero no para el player al rotar
+     */
     @Override
     public void onBackPressed() {
-        mp.stop();
-        super.onBackPressed();
+        if (mp != null) {
+            mp.stop();
+            mp = null;
+        }
+        finish();
     }
 }

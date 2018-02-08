@@ -15,6 +15,11 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
     }
 
+    /**
+     * Onclick unico para llamar a todos los botones
+     *
+     * @param v
+     */
     public void onClick(View v) {
         Button boton = (Button) v;
 

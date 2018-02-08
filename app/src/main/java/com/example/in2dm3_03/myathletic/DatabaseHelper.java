@@ -16,6 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     static final String KEY_UNAME = "uname";
     static final String KEY_PASS = "pass";
     SQLiteDatabase db;
+
     private static final String CREAR_TABLA = "create table socios (id integer primary key not null , " +
             "nombre text not null , uname text not null, pass text not null);";
 
@@ -23,13 +24,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         super(context, NOMBRE_BASEDATOS, null, VERSION_BASEDATOS);
     }
 
+    /**
+     * Crea la tabla socios
+     *
+     * @param db
+     */
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREAR_TABLA);
         this.db = db;
     }
 
     /**
-     * Inserta un contacto nuevo
+     * Inserta un nuevo contacto
      *
      * @param c
      */
@@ -76,6 +82,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return b;
     }
 
+    /**
+     * Actualiza la table
+     *
+     * @param db
+     * @param oldVersion
+     * @param newVersion
+     */
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         String query = "DROP TABLE IF EXISTS " + NOMBRE_TABLA;
         db.execSQL(query);

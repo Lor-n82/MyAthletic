@@ -20,7 +20,7 @@ public class NavegadorWeb extends AppCompatActivity {
         web = (WebView) findViewById(R.id.navegador);
 
         web.setWebViewClient(new MyWebViewClient());
-        WebSettings settings = web.getSettings();
+        //WebSettings settings = web.getSettings();
         web.loadUrl(mUrl);
 
     }

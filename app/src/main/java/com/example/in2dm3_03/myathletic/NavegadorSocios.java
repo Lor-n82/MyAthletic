@@ -15,12 +15,12 @@ public class NavegadorSocios extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navegador_socios);
 
-        //Recojo la direccion web que pasare al navegador
+        //Recojo la direccion web que pasare al navegador desde pantalla_socio
         mUrl = getIntent().getStringExtra("ser");
         web = (WebView) findViewById(R.id.navegadorSocios);
 
         web.setWebViewClient(new MyWebViewClient());
-        WebSettings settings = web.getSettings();
+        //WebSettings settings = web.getSettings();
         web.loadUrl(mUrl);
     }
 
@@ -35,13 +35,13 @@ public class NavegadorSocios extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        savedInstanceState.get("url");
+        savedInstanceState.get("ser");
         web.restoreState(savedInstanceState);
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        outState.putString("url", mUrl);
+        outState.putString("ser", mUrl);
         web.saveState(outState);
         super.onSaveInstanceState(outState);
     }

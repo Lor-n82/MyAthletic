@@ -59,6 +59,7 @@ public class nuevo_registro extends AppCompatActivity {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext());
         builder.setSmallIcon(icon);
+        builder.setColor(0xffff0000);
         builder.setTicker(text);
         builder.setWhen(when);
 

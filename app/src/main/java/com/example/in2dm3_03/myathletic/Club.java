@@ -26,7 +26,7 @@ public class Club extends AppCompatActivity {
     @SuppressLint("MissingPermission")
     public void contactarMail(View v) {
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "athletic@athletic-club.net", null));     //Enviar Mail
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "A la atención del Athletic Club");
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "A la atención del Athletic Club");      //Se le pasa el asunto
         startActivity(Intent.createChooser(emailIntent, this.getString(R.string.enviar_mail)));
     }
 }

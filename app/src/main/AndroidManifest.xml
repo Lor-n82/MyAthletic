@@ -49,12 +49,10 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".NavegadorWeb"
-            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".Notificacion" />
         <activity
             android:name=".NavegadorSocios"
-            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 

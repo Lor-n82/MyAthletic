@@ -20,7 +20,7 @@ public class Acerca extends AppCompatActivity {
 
         TextView text = (TextView) findViewById(R.id.textViewAcercaMenu);
 
-        registerForContextMenu(text); //este texto va a tener menu de contexto
+        registerForContextMenu(text); //Le decimos que esta vista va a contener el menu contextual
     }
 
     public void compartir(View v) {
@@ -32,6 +32,13 @@ public class Acerca extends AppCompatActivity {
         startActivity(Intent.createChooser(intent, "Compartir con"));
     }
 
+    /**
+     * Crear Menu contextual
+     *
+     * @param menu
+     * @param v
+     * @param menuInfo
+     */
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
