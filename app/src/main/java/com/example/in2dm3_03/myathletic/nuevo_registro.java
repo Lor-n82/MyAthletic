@@ -14,11 +14,14 @@ import android.widget.Toast;
 public class nuevo_registro extends AppCompatActivity {
     DatabaseHelper helper = new DatabaseHelper(this);
     EditText mNombre, mUsuario, mPass, mPassConfirm;
+    int contador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuevo_registro);
+
+        contador=0;
     }
 
     public void registrarse(View v) {
@@ -33,17 +36,21 @@ public class nuevo_registro extends AppCompatActivity {
             String username = mUsuario.getText().toString();
             String pass = mPass.getText().toString();
             String pass2 = mPassConfirm.getText().toString();
-
-            if (!pass.equals(pass2)) {
-                Toast p = Toast.makeText(nuevo_registro.this, "Las claves no coinciden", Toast.LENGTH_SHORT);
-                p.show();
+//
+            if (username.equals("") || nombre.equals("") || pass2.equals("") || pass.equals("")) {
+                Toast.makeText(this, "No se admiten valores en blanco", Toast.LENGTH_SHORT).show();
             } else {
-                Contacto c = new Contacto();
-                c.setNombre(nombre);
-                c.setUname(username);
-                c.setPass(pass);
-                helper.insertContact(c);
-                notificacion(c.getNombre(), c.getUname());
+                if (!pass.equals(pass2)) {
+                    Toast p = Toast.makeText(nuevo_registro.this, "Las claves no coinciden", Toast.LENGTH_SHORT);
+                    p.show();
+                } else {
+                    Contacto c = new Contacto();
+                    c.setNombre(nombre);
+                    c.setUname(username);
+                    c.setPass(pass);
+                    helper.insertContact(c);
+                    notificacion(c.getNombre(), c.getUname());
+                }
             }
         }
     }
