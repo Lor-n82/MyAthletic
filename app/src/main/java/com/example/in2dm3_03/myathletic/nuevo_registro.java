@@ -36,7 +36,7 @@ public class nuevo_registro extends AppCompatActivity {
             String username = mUsuario.getText().toString();
             String pass = mPass.getText().toString();
             String pass2 = mPassConfirm.getText().toString();
-//
+
             if (username.equals("") || nombre.equals("") || pass2.equals("") || pass.equals("")) {
                 Toast.makeText(this, "No se admiten valores en blanco", Toast.LENGTH_SHORT).show();
             } else {
